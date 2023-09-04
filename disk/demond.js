@@ -76,25 +76,31 @@ document.addEventListener("click",(e)=>{
 document.querySelector(".appel").addEventListener("click",()=>{
     document.querySelector(".location").classList.toggle("paddttom");
     document.querySelector(".location").classList.toggle("opacity");
-    document.querySelector(".element").classList.toggle("opacity");
 });
 
 document.addEventListener("click",(el)=>{
 if(el.target.id != "appel" && el.target.id != "location"){
     document.querySelector(".location").classList.add("opacity");
     document.querySelector(".location").classList.remove("paddttom");
-    document.querySelector(".element").classList.add("opacity");
 }
 });
 document.querySelector(".removelocate").addEventListener("click",()=>{
     document.querySelector(".location").classList.add("opacity");
     document.querySelector(".location").classList.remove("paddttom");
-    document.querySelector(".element").classList.add("opacity");
 });
 /*-------------------- hidden categories menu  -----------------------*/
 document.querySelector(".green").addEventListener("click",()=>{
-    document.querySelector(".categories").classList.toggle("none");
+    document.querySelector(".categories").classList.toggle("cetogoriNone");
     document.querySelector(".categories").classList.toggle("souse");
+    document.querySelector(".categories").classList.toggle("opacity");    
+}); 
+
+document.addEventListener("click",(ek)=>{
+    if(ek.target.id != "green" && ek.target.id != "categories" && ek.target.id != "vegetab" && ek.target.id != "beverages" && ek.target.id != "meat" && ek.target.id != "brackfast" && ek.target.id != "frozen" && ek.target.id != "biscuiits" && ek.target.id != "staples"){             
+    document.querySelector(".categories").classList.add("cetogoriNone");
+    document.querySelector(".categories").classList.remove("souse");
+    document.querySelector(".categories").classList.add("opacity");   
+}
 });
 
 /*-------------------- hidden vegetables & fruit menu  -----------------------*/
@@ -248,6 +254,106 @@ if(ek.target.id != "productMenu" && ek.target.id != "productshort"){
 }
 });
 
+/*-------------------- hidden mega short menu  -----------------------------*/
+document.querySelector(".megaLink").addEventListener("click",()=>{
+document.querySelector(".megaMenu").classList.toggle("homeBlock");  
+document.querySelector(".megaMenu").classList.toggle("opacity"); 
+     
+});
+                            
+document.addEventListener("click",(ek)=>{
+    if(ek.target.id != "megaLink" && ek.target.id != "megaMenu"){
+        document.querySelector(".megaMenu").classList.remove("homeBlock");  
+        document.querySelector(".megaMenu").classList.add("opacity");  
+    }
+});
+    
+/*-------------------- hidden blog short menu  -----------------------------*/
+document.querySelector(".blogLink").addEventListener("click",()=>{
+document.querySelector(".blog").classList.toggle("homeBlock");  
+document.querySelector(".blog").classList.toggle("opacity");  
+});
+                      
+document.addEventListener("click",(ek)=>{
+    if(ek.target.id != "blogLink" && ek.target.id != "blog"){
+        document.querySelector(".blog").classList.remove("homeBlock");  
+        document.querySelector(".blog").classList.add("opacity");  
+    }
+});
+
+/*-------------------- hidden pages short menu  -----------------------------*/
+document.querySelector(".pagesLink").addEventListener("click",()=>{
+document.querySelector(".pages").classList.toggle("homeBlock");  
+document.querySelector(".pages").classList.toggle("opacity");  
+});
+                            
+document.addEventListener("click",(ek)=>{
+    if(ek.target.id != "pagesLink" && ek.target.id != "pages" &&  ek.target.id != "pagesFirstMenu" &&  ek.target.id != "pagesSecondMenu"){
+        document.querySelector(".pages").classList.remove("homeBlock");  
+        document.querySelector(".pages").classList.add("opacity");  
+    }
+});
+   
+/*-------------------- hidden First small pages short menu  -----------------------------*/
+document.querySelector(".pagesFirstMenu").addEventListener("click",()=>{
+    document.querySelector(".pagesFirstshort").classList.toggle("pagesFirstShortBlock");  
+    document.querySelector(".pagesFirstshort").classList.toggle("opacity"); 
+    document.querySelector(".pagesOneSvg").classList.toggle("honer");
+    });
+                                
+    document.addEventListener("click",(ek)=>{
+    if(ek.target.id != "pages" && ek.target.id != "pagesFirstshort" && ek.target.id != "pagesFirstMenu"){
+            document.querySelector(".pagesFirstshort").classList.remove("pagesFirstShortBlock"); 
+            document.querySelector(".pagesOneSvg").classList.remove("honer"); 
+            document.querySelector(".pagesFirstshort").classList.add("opacity");  
+    }
+    });
+
+/*-------------------- hidden Second small pages short menu  -----------------------------*/
+document.querySelector(".pagesSecondMenu").addEventListener("click",()=>{
+    document.querySelector(".pagesSecondshort").classList.toggle("pagesFirstShortBlock");  
+    document.querySelector(".pagesSecondshort").classList.toggle("opacity"); 
+    document.querySelector(".pagesTwoSvg").classList.toggle("honer");
+    });
+                                
+    document.addEventListener("click",(ek)=>{
+    if(ek.target.id != "pages" && ek.target.id != "pagesSecondshort" && ek.target.id != "pagesSecondMenu"){
+            document.querySelector(".pagesSecondshort").classList.remove("pagesFirstShortBlock"); 
+            document.querySelector(".pagesTwoSvg").classList.remove("honer"); 
+            document.querySelector(".pagesSecondshort").classList.add("opacity");  
+    }
+    });
+
+/*-------------------- hidden  seller short menu  -----------------------------*/
+document.querySelector(".sellerLink").addEventListener("click",()=>{
+    document.querySelector(".seller").classList.toggle("homeBlock");  
+    document.querySelector(".seller").classList.toggle("opacity");  
+    });
+                      
+    document.addEventListener("click",(ek)=>{
+    if(ek.target.id != "sellerLink" && ek.target.id != "shop"){
+            document.querySelector(".seller").classList.remove("homeBlock");  
+            document.querySelector(".seller").classList.add("opacity");  
+    }
+    });
+    
+/*-------------------- hidden Deal ToDay menu  -----------------------*/
+document.querySelector(".dealLink").addEventListener("click",()=>{
+    document.querySelector(".deal").classList.toggle("paddttom");
+    document.querySelector(".deal").classList.toggle("opacity");
+});
+
+document.addEventListener("click",(el)=>{
+if(el.target.id != "dealLink" && el.target.id != "deal"){
+    document.querySelector(".deal").classList.add("opacity");
+    document.querySelector(".deal").classList.remove("paddttom");
+}
+});
+document.querySelector(".removeDeal").addEventListener("click",()=>{
+    document.querySelector(".deal").classList.add("opacity");
+    document.querySelector(".deal").classList.remove("paddttom");
+});
+    
 
 
 
@@ -256,7 +362,4 @@ if(ek.target.id != "productMenu" && ek.target.id != "productshort"){
 
 
 
-
-
-
-
+    

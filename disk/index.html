@@ -33,7 +33,7 @@
   }
   .reday{
     color: var(--one-color);
-    font-size: 17px;
+    font-size: 16px;
   }
   .one{
 background-color: var(--one-color);
@@ -51,6 +51,9 @@ background-color: var(--two-color);
 visibility: hidden; 
 opacity: 1;
  }
+.cetogoriNone{
+  visibility: hidden; 
+}
  .size{
 font-size: 9px;
 padding: 7px;
@@ -120,7 +123,6 @@ padding: 7px;
 }
 .souse{
   transition: 0.5s;
-  opacity: 1;
   margin-top: 18px;
 }
 .aftes::before,
@@ -135,7 +137,7 @@ transition: 0.4s;
 width: 0;
 }
 .soulBefore:hover:before{
-  width: 50px;
+  width: 100px;
 }
 .aftes:hover:before{
   width: 70px;
@@ -171,6 +173,9 @@ border: 1px solid #bbb;
   transition: 0.3s;
   transform: translate(-50%,-50%);
 }
+.heig{
+  height: 440px;
+}
 .might{
     width: 90%;
 }
@@ -181,14 +186,14 @@ border: 1px solid #bbb;
 .cordWidth{
   /* width: 520px; */
   height: 336px;
-  top: 28.5%;
+  top: 27%;
   left: 28%;               /* 27.3% */
 }
 .cordFifth,
 .corHeight{
 width: 290px;
 height: 336px;
-top: 28.5%;
+top: 27%;
 }
 
 .tile{
@@ -312,12 +317,56 @@ padding-right: 60px;
     left: 43%;
     width: 200px;
   }
+  .pagesFirstshort{
+    display: flex;
+    position: absolute;
+    top: 25.5%;
+    left: 70%;
+    width: 200px;
+  }
+  .pagesSecondshort{
+    display: flex;
+    position: absolute;
+    top: 29.5%;
+    left: 70%;
+    width: 200px;
+  }
+  .pages{
+    display: flex;
+    position: absolute;
+    top: 24%;
+    left: 62.7%;
+    width: 200px;
+  }
   .shop{
     display: flex;
     position: absolute;
     top: 24%;
     left: 37.5%;
     width: 200px; 
+  }
+  .seller{
+    display: flex;
+    position: absolute;
+    top: 24%;
+    left: 69%;
+    width: 200px; 
+  }
+  .blog{
+    display: flex;
+    position: absolute;
+    top: 24%;
+    left: 57.5%;
+    width: 200px; 
+  }
+  .megaMenu{
+    display: flex;
+    position: absolute;
+    top: 24%;
+    left: 27%;
+  }
+  .megaGap{
+    gap: 14px;
   }
   .home{
     display: flex;
@@ -331,7 +380,7 @@ padding-right: 60px;
   visibility: visible;
   transition: 0.8s;
   position: absolute;
-  top:26%;
+  top:25.5%;
 }
 .productShortBlock{
   opacity: 1;
@@ -339,6 +388,13 @@ padding-right: 60px;
   transition: 0.8s;
   position: absolute;
   left:55.6%; 
+}
+.pagesFirstShortBlock{
+  opacity: 1;
+  visibility: visible;
+  transition: 0.8s;
+  position: absolute;
+  left:75.4%; 
 }
   .must{
     padding-left: 132px;
@@ -380,15 +436,105 @@ padding-right: 60px;
 .opacity{
  opacity: 0;
 }
-.element{
+
+.imagesOneDeal{
+width: 75px;
+height: 87px;
+padding: 4px 5px;
+}
+.imagesOTwoDeal{
+width: 80px;
+height: 84px;
+padding: 4px 0;
+}
+.oneDeal{
+  background-color: #daf1ec;
+}
+.TwoDeal{
+  background-color:#ffe4e4;
+}
+.threeDeal{
+  background-color:#fff1e1;
+}
+.fourDeal{
+  background-color:#daf1ec;
+}
+.gspan{
+  font-size: 13px;
+  font-weight: 400;
+}
+.bacgroundOne{
+  background-image:url(/images/1.jpg);
+  background-size: cover;
+  width: 65%;
+  max-height: 560px;
+  /* width: 65%; */
+}
+@media (min-width:370px) {
+  .disBlock{
+  display: block;
+} 
+}
+.yewwidth{
+  width: 100%;
+}
+.widtn{
+  width: 83.5%;
+  margin: 20px auto 0;
+}
+.fitBground{
+  background: linear-gradient(75deg,#f2e2e0 ,transparent );
+}
+.maxText{
+  font-size: calc(16px + (42 - 16) * ((100vw - 320px) / (1920 - 320)));
+  line-height: 1.4;
+}
+.maxState{
+  max-width: 60%;
+  line-height: 1.4;
+  padding: calc(18px + (60 - 16) * ((100vw - 320px) / (1920 - 320)));
+}
+@media (max-width:991px) {
+  .maxState{
+    max-width: 70%;
+  }
+}
+@media (min-width:580px) {
+  .paragWidth{
+display: block;
+  }
+}
+.bgroundShop{
+background: linear-gradient(90deg, #ff6b6b 0%, #ff4f4f 100%);
+font-size: 19px;
+font-weight: 600;
+transition: 0.3s ease;
+padding: 10px 25px;
+position: relative;
+}
+.bgroundShop::before{
+  content: "";
   position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
   width: 100%;
+  z-index: -1;
+  transition: 0.2s ease;
+  height: 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg,  #ff4f4f 0%, #ff6b6b 100%);
+}
+.bgroundShop:hover:before{
+  color: #fff;
   height: 100%;
 }
-.add{
-  width: 100%;
-  height: 100%;
-}
+
+
+
+
+
+
 
 </style>
 <title>Wit-On </title>
@@ -417,7 +563,7 @@ padding-right: 60px;
 <i class="fa-sharp fa-solid fa-earth-americas"></i>
   </div>
     <!------------------- two ---------------------->
-  <div class="flex flex-col gap-4 bg-white border text-black py-2 w-40 rounded -mb-32  display none transition-all">
+  <div class="flex flex-col gap-4 bg-white border text-black py-2 w-40 rounded -mb-32 z-40 display none transition-all">
     <div class="flex gap-3 items-center mx-4 justify-start state cursor-pointer ">
       <img src="/images/united-states.png" class="w-5">
       <h3 class="fons">English</h3>
@@ -513,29 +659,29 @@ padding-right: 60px;
 <!---------------------------------------------- categories menu ---------------------------->
 <div class="flex sust md:justify-between md:pr-0  justify-around relative  items-center">
 <a href="#" class="green  hidden md:flex  gap-6 ml-1.5 py-3 pr-7 pl-6 rounded" id="green">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="list-ul" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-list-ul fa-lg w-5">
+<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="list-ul" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-list-ul fa-lg w-5 green" id="green">
   <path fill="#ffffff" d="M64 144a48 48 0 1 0 0-96 48 48 0 1 0 0 96zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM64 464a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm48-208a48 48 0 1 0 -96 0 48 48 0 1 0 96 0z" class=""></path>
 </svg>
-  <h3 class="text-white text-lg font-bold">All Categories</h3>
+  <h3 class="text-white text-lg font-bold green" id="green">All Categories</h3>
 </a>
 <!---------------------------------------------- Links menu ---------------------------->
 <div class=" hidden fiteo">
 <ul class="flex gap-12 ">
-  <li><a href="#" class="capitalize text-base locmenu homeLink" id="homeLink">home</a></li>
-  <li><a href="#" class="capitalize locmenu shopLink" id="shopLink">shop</a></li>
-  <li><a href="#" class="capitalize locmenu productLink" id="productLink">product</a></li>
-  <li><a href="#" class="capitalize locmenu">mega menu</a></li>
-  <li><a href="#" class="capitalize locmenu">blog</a></li>
-  <li class="flex flex-col textsm -mt-4"><span class="bg-red-500 text-xs textxs w-8 ml-5 rounded-br rounded-tl px-1 text-center text-white font-semibold">New</span><a href="#" class="capitalize locmenu">pages</a></li>
-  <li><a href="#" class="capitalize locmenu">seller</a></li>
+  <li><a href="#" class="capitalize text-base  locmenu homeLink" id="homeLink">home</a></li>
+  <li><a href="#" class="capitalize locmenu  shopLink" id="shopLink">shop</a></li>
+  <li><a href="#" class="capitalize locmenu  productLink" id="productLink">product</a></li>
+  <li><a href="#" class="capitalize locmenu megaLink" id="megaLink">mega menu</a></li>
+  <li><a href="#" class="capitalize locmenu blogLink" id="blogLink">blog</a></li>
+  <li class="flex flex-col textsm -mt-4 pagesLink" id="pagesLink"><span class="bg-red-500 text-xs textxs w-8 ml-5 rounded-br rounded-tl px-1 text-center text-white cursor-pointer font-semibold pagesLink" id="pagesLink">New</span><a href="#" class="capitalize locmenu pagesLink" id="pagesLink">pages</a></li>
+  <li><a href="#" class="capitalize locmenu sellerLink" id="sellerLink">seller</a></li>
 </ul>
 </div>
 <!---------------------------------------------- enargy Deal ---------------------------->
-<div class=" bg-green-100 mr-1.5 hidden cursor-pointer md:flex rounded pr-5 pl-5 py-3 gap-3">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="#0da487"  viewBox="0 0 32 32" version="1.1" class="w-6 font-normal">
+<div class=" bg-green-100 mr-1.5 hidden cursor-pointer md:flex rounded pr-5 pl-5 py-3 gap-3 dealLink" id="dealLink">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="#0da487"  viewBox="0 0 32 32" version="1.1" class="w-6 font-normal dealLink" id="dealLink">
     <path d="M18.605 2.022v0zM18.605 2.022l-2.256 11.856 8.174 0.027-11.127 16.072 2.257-13.043-8.174-0.029zM18.606 0.023c-0.054 0-0.108 0.002-0.161 0.006-0.353 0.028-0.587 0.147-0.864 0.333-0.154 0.102-0.295 0.228-0.419 0.373-0.037 0.043-0.071 0.088-0.103 0.134l-11.207 14.832c-0.442 0.607-0.508 1.407-0.168 2.076s1.026 1.093 1.779 1.099l5.773 0.042-1.815 10.694c-0.172 0.919 0.318 1.835 1.18 2.204 0.257 0.11 0.527 0.163 0.793 0.163 0.629 0 1.145-0.294 1.533-0.825l11.22-16.072c0.442-0.607 0.507-1.408 0.168-2.076-0.34-0.669-1.026-1.093-1.779-1.098l-5.773-0.010 1.796-9.402c0.038-0.151 0.057-0.308 0.057-0.47 0-1.082-0.861-1.964-1.939-1.999-0.024-0.001-0.047-0.001-0.071-0.001v0z"/>
 </svg>
-<a href="#" class="dealtext-base miss text-green-600 font-semibold select-none">Deal Today</a>
+<a href="#" class="dealtext-base miss text-green-600 font-semibold select-none dealLink" id="dealLink">Deal Today</a>
 </div>
 </div>
 
@@ -545,6 +691,153 @@ padding-right: 60px;
 
 
 
+<!---------------------------------------------- hidden Deal ToDay menu ---------------------------->
+<div class="flex flex-col hoase absolute  mia sorx py-6 px-5 rounded bg-white deal heig opacity none" id="deal">
+  <h2 class="locmenu text-xl  font-semibold">Deal Today </h2>
+  <p class="locmenu mb-5 text-sm">Recommended deals for you.</p>
+  <button class="absolute -top-3 -right-5 removeDeal text-white bg-green-600 cursor-pointer rounded-md pt-0.5 pb-1.5 nize px-3.5">x</button>
+  <ul value="" class="flex flex-col h-80 overflow-hidden overflow-y-scroll gap-3">
+  <a class="flex justify-between items-center py-2 rounded-xl gap-0 oneDeal hover:text-white px-4  cursor-pointer">
+  <img src="/images/10.png" class="w-20 imagesOneDeal" > 
+  <div class="flex flex-col gap-2">
+    <h3 class="text-black">Blended Instant Coffee 50 g Buy 1 Get 1 Free </h3>
+    <p class="text-black flex gap-2 items-center">$52.57  <span class="text-sm text-red-500"><s>57.62</s></span> <span class="text-base gspan">500 G</span></p>
+  </div>     
+  </a>
+  <a class="flex justify-between items-center py-2 rounded-xl gap-0 TwoDeal hover:text-white px-4  cursor-pointer">
+    <img src="/images/11.png" class="w-20 imagesOTwoDeal" > 
+    <div class="flex flex-col gap-2">
+      <h3 class="text-black">Blended Instant Coffee 50 g Buy 1 Get 1 Free </h3>
+      <p class="text-black flex gap-2 items-center">$52.57  <span class="text-sm text-red-500"><s>57.62</s></span> <span class="text-base gspan">500 G</span></p>
+    </div>     
+    </a>
+    <a class="flex justify-between items-center py-2 rounded-xl gap-0 threeDeal hover:text-white px-4  cursor-pointer">
+      <img src="/images/12.png" class="w-20 imagesDeal" > 
+      <div class="flex flex-col gap-2">
+        <h3 class="text-black">Blended Instant Coffee 50 g Buy 1 Get 1 Free </h3>
+        <p class="text-black flex gap-2 items-center">$52.57  <span class="text-sm text-red-500"><s>57.62</s></span> <span class="text-base gspan">500 G</span></p>
+      </div>     
+      </a>
+      <a class="flex justify-between items-center py-2 rounded-xl gap-0 fourDeal hover:text-white px-4  cursor-pointer">
+        <img src="/images/13.png" class="w-20 imagesDeal" > 
+        <div class="flex flex-col gap-2">
+          <h3 class="text-black">Blended Instant Coffee 50 g Buy 1 Get 1 Free </h3>
+          <p class="text-black flex gap-2 items-center">$52.57  <span class="text-sm text-red-500"><s>57.62</s></span> <span class="text-base gspan">500 G</span></p>
+        </div>     
+        </a>             
+</ul>
+</div>
+  
+
+
+
+
+
+
+<!----------------------------------------------hidden seller shorts ---------------------------->
+<div class=" justify-center flex-col gap-2 text-sm font-medium bg-white absolute hidden  seller  opacity none transition-all  sorx  rounded-lg py-4 px-5" id="seller">
+  <a href="#" class="soulBefore relative">  Become a Seller  </a>                                             
+  <a href="#" class="soulBefore relative">  Seller Dashboard  </a>
+  <a href="#" class="soulBefore relative">  Seller Detail  </a>
+  <a href="#" class="soulBefore relative">  Seller Detail 2  </a>                                             
+  <a href="#" class="soulBefore relative">  Seller Grid  </a>
+  <a href="#" class="soulBefore relative">  Seller Grid 2  </a>
+  </div>
+    
+
+
+
+
+
+<!----------------------------------------------hidden pages shorts ---------------------------->
+<div class=" justify-center flex-col gap-2 text-sm font-medium bg-white absolute hidden  pages  opacity none transition-all  sorx  rounded-lg py-4 px-5" id="pages">
+  <div class="flex justify-between  pagesFirstMenu" id="pagesFirstMenu"><a href="#" class="soulBefore relative pagesFirstMenu" id="pagesFirstMenu">Email Taimplate</a>
+    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" class="w-5   pagesOneSvg" id="pagesOneSvg">
+      <path d="M7 10L12 15L17 10" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg></div>
+  <div class="flex justify-between  pagesSecondMenu" id="pagesSecondMenu"> 
+    <a href="#" class="soulBefore relative pagesSecondMenu" id="pagesSecondMenu">  Invoice Template</a>
+     <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" class="w-5   pagesTwoSvg" id="pagesTwoSvg">
+      <path d="M7 10L12 15L17 10" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg></div> 
+  <a href="#" class="soulBefore relative">Product Slider</a>                                              
+  <a href="#" class="soulBefore relative">  404</a> 
+  <a href="#" class="soulBefore relative">  About Us</a>                                          
+  <a href="#" class="soulBefore relative">Cart</a>                                          
+  <a href="#" class="soulBefore relative">Contact</a>                                          
+  <a href="#" class="soulBefore relative">  Checkout</a>                                          
+  <a href="#" class="soulBefore relative">  Coming Soon</a>                                          
+  <a href="#" class="soulBefore relative">  Compare</a>                                          
+  <a href="#" class="soulBefore relative">Faq</a>                                          
+  <a href="#" class="soulBefore relative">  Order Success </a>
+  <a href="#" class="soulBefore relative">    Order Tracking</a>                                          
+  <a href="#" class="soulBefore relative"> OTP</a>                                          
+  <a href="#" class="soulBefore relative">  Search</a>                                          
+  <a href="#" class="soulBefore relative">  User Dashboard</a>                                          
+  <a href="#" class="soulBefore relative">  Wishlist</a>                                                                                     
+  </div>
+  <!---------------------------------------------- small first pages menu shorts ---------------------------->
+  <div class=" justify-center flex-col gap-2 text-sm font-medium bg-white absolute opacity  pagesFirstshort none   transition-all  sorx  rounded-lg py-4 px-5" id="pagesFirstshort">
+  <a href="#" class="soulBefore relative">Abandonment</a>                                             
+  <a href="#" class="soulBefore relative">  Offer Template  </a>
+  <a href="#" class="soulBefore relative">  Order Success  </a> 
+  <a href="#" class="soulBefore relative">  Reset Password  </a>                                           
+  <a href="#" class="soulBefore relative">  Welcome template  </a>                                                                                                                          
+  </div>
+
+ <!---------------------------------------------- small second pages menu shorts ---------------------------->
+<div class=" justify-center flex-col gap-2 text-sm font-medium bg-white absolute opacity  pagesSecondshort none   transition-all  sorx  rounded-lg py-4 px-5" id="pagesSecondshort">
+<a href="#" class="soulBefore relative">Invoice 1</a>                                             
+<a href="#" class="soulBefore relative">Invoice 2</a>
+<a href="#" class="soulBefore relative">Invoice 3</a>                                                                                                                        
+</div>
+
+
+
+<!----------------------------------------------hidden blog shorts ---------------------------->
+<div class=" justify-center flex-col gap-2 text-sm font-medium bg-white absolute hidden  blog  opacity none transition-all  sorx  rounded-lg py-4 px-5" id="blog">
+<a href="#" class="soulBefore relative">Blog Detail</a>                                             
+<a href="#" class="soulBefore relative">Blog Grid</a>
+<a href="#" class="soulBefore relative">Blog List</a>                                         
+</div>
+  
+
+
+
+<!----------------------------------------------hidden mega menu shorts ---------------------------->
+<div class=" justify-center  gap-16 text-sm font-medium bg-white absolute hidden  megaMenu  opacity none  transition-all  sorx  rounded-lg py-7 pl-9 pr-48" id="shop" id="megaMenu">
+  <div class="flex flex-col gap-2.5">
+  <h3 class="font-bold text-base mb-4 text-green-600 md:mb-2 ">Daily Vegetables</h3>
+  <a href="#" class="soulBefore relative">Beans & Brinjals</a>                                             
+  <a href="#" class="soulBefore relative">Broccoli & Cauliflower</a>    
+  <a href="#" class="soulBefore relative">Chilies, Garlic  </a>                                             
+  <a href="#" class="soulBefore relative">Vegetables & Salads  </a>  
+  <a href="#" class="soulBefore relative">Gourd, Cucumber  </a>                                             
+  <a href="#" class="soulBefore relative">Herbs & Sprouts  </a>     
+  <a href="#" class="soulBefore relative">Lettuce & Leafy  </a>                                                                           
+  </div>
+
+  <div class="flex flex-col gap-2.5">
+    <h3 class="font-bold text-base mb-4 text-green-600 md:mb-2 ">Baby Tender</h3>
+  <a href="#" class="soulBefore relative">Beans & Brinjals</a>                                             
+  <a href="#" class="soulBefore relative">Broccoli & Cauliflower</a>    
+  <a href="#" class="soulBefore relative">Chilies, Garlic  </a>                                             
+  <a href="#" class="soulBefore relative">Vegetables & Salads  </a>  
+  <a href="#" class="soulBefore relative">Gourd, Cucumber  </a>                                             
+  <a href="#" class="soulBefore relative">Potatoes & Tomatoes </a>     
+  <a href="#" class="soulBefore relative">Peas & Corns  </a>                                           
+    </div>
+
+    <div class="flex flex-col gap-2.5">
+      <h3 class="font-bold text-base mb-4 text-green-600 md:mb-2 ">Exotic Vegetables</h3>
+      <a href="#" class="soulBefore relative">Asparagus & Artichokes</a>                                             
+      <a href="#" class="soulBefore relative">Avocados & Peppers</a>    
+      <a href="#" class="soulBefore relative">Broccoli & Zucchini</a>                                             
+      <a href="#" class="soulBefore relative">Celery, Fennel & Leeks</a>  
+      <a href="#" class="soulBefore relative">Chilies & Lime</a>                                                                                       
+      </div>
+</div>
+  
 
 <!----------------------------------------------hidden product shorts ---------------------------->
 <div class=" justify-center flex-col gap-2 text-sm font-medium bg-white absolute hidden  product  opacity none transition-all  sorx  rounded-lg py-4 px-5" id="product">
@@ -636,7 +929,7 @@ padding-right: 60px;
   <div class="flex flex-col">
   <h3 class="font-bold mb-3 md:mb-2 -ml-3">Biscuits & Cookies</h3>
   <ul class="flex flex-col yes gap-1.5">
-    <li><a href="#" class="capitalize text-sm ">salted biscuits</a></li>
+    <li><a href="#" class="capitalize text-sm">salted biscuits</a></li>
     <li><a href="#" class="capitalize text-sm">marie health</a></li>
     <li><a href="#" class="capitalize text-sm">cream biscuiits</a></li>
     <li><a href="#" class="capitalize text-sm">glucose & milk biscuiits</a></li>
@@ -782,7 +1075,7 @@ padding-right: 60px;
 
 
 <!---------------------------------------------- hidden categories menu ---------------------------->
-<div class="flex categories flex-col gap-6 couse lg:left-1/15 opacity-0 rounded sorx mt-7 py-3 px-7 none" id="categories">
+<div class="flex categories flex-col gap-6 couse lg:left-1/15 opacity rounded sorx mt-7 py-3 px-7 cetogoriNone" id="categories">
 <div class="flex gap-3 cursor-pointer relative items-center " >
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 27" fill="none" class="w-6 ">
     <path d="M21.1682 8.60176L18.1869 7.36733C16.548 6.6876 14.879 7.547 14.479 9.27556L11.1436 23.6796C10.9433 24.5444 11.4501 25.528 12.2703 25.868C13.09 26.2075 14.145 25.8695 14.6141 25.1174L22.4412 12.5734C23.3799 11.0678 22.8077 9.28053 21.1683 8.60145L21.1682 8.60176Z" stroke="#222222" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -854,18 +1147,8 @@ padding-right: 60px;
 
 
 
-
-
-
-
-
-
-
-
-
-
 <!---------------------------------------------- hidden location menu ---------------------------->
-<div class="flex flex-col hoase absolute  mia sorx py-6 px-5 rounded bg-white location opacity  " id="location">
+<div class="flex flex-col hoase absolute  mia sorx py-6 px-5 rounded bg-white location opacity none " id="location">
 <h2 class="locmenu text-xl mb-1.5 font-semibold">Choose your Delivery Location</h2>
 <p class="locmenu mb-7">Enter your address and we will specify the offer for your area.</p>
 <button class="absolute -top-3 -right-5 removelocate text-white bg-green-600 cursor-pointer rounded-md pt-0.5 pb-1.5 nize px-3.5">x</button>
@@ -994,8 +1277,38 @@ padding-right: 60px;
 </div>
 
 
-<!---------------------------------------------- Hidden Element ---------------------------->
-<!-- <div class="element absolute top-0 left-0 opacity-80 -z-10 bg-red-100" id="element"></div>  -->
+
+
+<!---------------------------------------------- Second Section  ----------------------------------->
+<!---------------------------------------------- First Selection ----------------------------------->
+<div class="yewwidth">
+  <div class="flex widtn">
+  <div class="flex bacgroundOne rounded-lg">
+    <div class="maxState ">
+  <h4 class="locmenu flex gap-4 items-center  text-gray-600 ">Exclusive offer <span class="text-red-500 hidden disBlock locmenu rounded-2xl fitBground px-4 py-1 ">30% Off</span></h4>
+  <h2 class="locmenu uppercase text-4xl font-bold maxText">Stay home &  delivered your</h2>
+  <h2 class="locmenu uppercase text-5xl font-extrabold maxText text-green-600">Daily Needs</h2>
+  <p class="hidden locmenu paragWidth text-sm text-gray-500 ">Vegetables contain many vitamins and minerals that are good for your health.</p>
+  <button class="bgroundShop mt-6 z-50 rounded-lg text-white">Shop Now</button>
+  
+  
+  </div>
+  </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
+
+
 
 
 
